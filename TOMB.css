@@ -1,0 +1,367 @@
+* {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.white {
+  color: white;
+}
+
+.poster {
+  background: url(./images/poster.webp);
+  z-index: 1;
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -10px;
+}
+.poster-content {
+  width: 95%;
+  margin: auto;
+  margin-top: 580px;
+  display: grid;
+  padding: 30px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.poster > div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.first-flex {
+  font-weight: 600;
+  font-size: 8px;
+}
+.first-flex button {
+  width: 100%;
+  font-weight: 600;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+}
+.btn1 {
+  background-color: blue;
+}
+.btn2 {
+  background-color: rgba(84, 84, 84, 0.5);
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+}
+.btn2 img {
+  height: 15px;
+  width: 15px;
+}
+.movie-title {
+  margin-top: 100px;
+  max-width: 100px;
+  min-width: 400px;
+  object-fit: contain;
+  margin-left: 44px;
+}
+.discription-wrapper {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.discription-para-wrapper {
+  margin-bottom: 55px;
+  margin-top: 40px;
+}
+.discription-para {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.details-wrapper {
+  display: flex;
+  column-gap: 20px;
+  color: rgba(255, 255, 255, 0.64);
+  line-height: 20px;
+}
+.details span::after {
+  content: " · ";
+}
+.details span:nth-last-child(1)::after {
+  content: "";
+}
+.badge1 img {
+  width: 15px;
+  height: 15px;
+}
+.star {
+  line-height: 20px;
+}
+.star-span {
+  color: rgba(255, 255, 255, 0.64);
+}
+.star-wrapper {
+  margin-top: 40px;
+}
+.TOMB-trailer-cont {
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+  border-bottom: 1px solid rgb(180, 177, 177);
+  padding-bottom: 20px;
+}
+.TOMB-trailers {
+  display: flex;
+  flex-direction: row;
+}
+h6 {
+  font-weight: bolder;
+}
+.TOMB-trailers > div {
+  width: 250px;
+  padding: 10px;
+}
+.TOMB-trailers p {
+  font-weight: normal;
+  font-size: 2px;
+}
+.trailer-image {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 1;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
+}
+.image-box:hover .trailer-image {
+  opacity: 0.3;
+}
+.slide-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-img:hover .trailer-image {
+  opacity: 0.3;
+}
+.slide-img:hover .overlay{
+    opacity: 1;
+}
+.image-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.image-box:hover .overlay {
+  opacity: 1;
+}
+.image-box:hover {
+  background-color: black;
+}
+.overlay {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  border-radius: 40px;
+  opacity: 0;
+}
+.overlay2{
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin-left: 200px;
+    margin-top: 100px;
+    background-color: rgb(160, 128, 128);
+   
+
+}
+.overlay2:hover{
+    background-color: blue;
+    align-items: center;
+}
+.play-btn i {
+  color: white;
+  position: absolute;
+  left: 15px;
+  margin-top: 11px;
+  font-size: 18px;
+}
+.three-dots i{
+    left:8px;
+    margin-top: -8px;
+}
+.TOMB-trailer-cont2 {
+  margin-top: 20px;
+}
+.TOMB-trailer-cont2:hover .next {
+  visibility: visible;
+}
+.TOMB-trailer-cont2:hover .prev {
+  visibility: visible;
+}
+
+.slider-container {
+  margin-top: 10px;
+  display: flex;
+}
+.carousel {
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  margin-left: -20px;
+}
+.slider {
+  display: flex;
+  height: 100%;
+  width: 500%;
+  flex-shrink: 0;
+  transition: all 0.5s;
+}
+section {
+  flex-basis: 20%;
+  flex-shrink: 0;
+  display: flex;
+  column-gap: 20px;
+}
+.next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: rgb(175, 174, 174);
+  font-weight: 100;
+  margin-top: 36px;
+  visibility: hidden;
+}
+.prev {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-left: 0px;
+  color: rgb(175, 174, 174);
+  font-weight: 100;
+  margin-top: 36px;
+  visibility: hidden;
+}
+.controls button i {
+  font-size: 80px;
+}
+.divider{
+    border-bottom: 1px solid gray;
+    width: 95%;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.HTW-cont{
+    width: 95%;
+    margin: auto;
+}
+.HTW{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
+}
+.HTW-cont > div{
+    width: 280px;
+}
+.HTW-cont img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.HTW-cont button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+    height: 60px;
+    padding-top: 10px;
+    border: none;
+    margin-top: -10px
+}
+/* .avatara{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    row-gap: 10px;
+}
+.avatara img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
+}
+.cast{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+}
+
+.cast-name{
+    font-weight: 300;
+}
+.role{
+    color: gray;
+}
+.cast-section{
+    margin-left: 40px;
+/* } */
+/* @media only screen and (max-width: 768px){
+    .poster{
+        background-size: inherit;
+    }
+    .movie-title{
+        height: 50px;
+    width: 200px;
+    margin-left: -49px;
+    margin-top: 55px;
+    }
+    .overlay2{
+        visibility: hidden;
+    }
+    .poster-content{
+        margin-top: 200px;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .discription-wrapper{
+        grid-column: 2;
+    }
+    .discription-para-wrapper{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .details-wrapper{
+        width: 198%;
+    }
+    .first-flex{
+        text-align: center;
+    }
+} */
+/* @media only screen and (max-width: 425px) {
+  .poster {
+    width: 100%;
+    height: 800px;
+  }
+  .movie-title {
+    min-width: 277px;
+    margin-top: 300px;
+    margin-left: 63px;
+  } */
+  
+/* } */ 
