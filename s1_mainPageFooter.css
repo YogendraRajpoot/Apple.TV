@@ -1,0 +1,275 @@
+@media (max-width:426px) {
+    .s1_footer{
+        display:block;
+        background-color:rgb(0, 0, 0);
+        align-items: center;
+        margin-top: 25px;
+        width:100%;
+        text-align: center;
+        
+
+    }
+    
+    .s1_footerSubDiv1{
+       
+        width:70%;
+         background-color: #000000;
+        text-align: center;
+        margin-left: 15%;
+       
+    }
+
+    #s1_footerImage{
+     
+        margin-top: 60px;
+        width:55px;
+
+    }
+
+    #s1_footerH1{
+        color:white;
+        text-align: center;
+        margin-left: 5%;
+        font-size: 23px;
+        font-family:  sans-serif;
+    }
+
+    #s1_footerH3{
+        color:white;
+         font-size:10px;
+        font-family: sans-serif;
+         font-weight: 400;
+         margin-left: 5%;
+         text-align: center;
+    }
+    #s1_footerA{
+        color:#007aff;
+        text-align: center;
+        font-weight: 50;
+        font-size: 10px;
+    }
+
+    .s1_footerSubDiv2{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 40px;
+        margin-left: 15%;
+        margin-right: 15%;
+      
+    }
+    #s1_footerDivesLogo{
+        width:60px;
+    }
+   #s1_footerDivesText{
+       text-align: center;
+       color:white;
+       font-size: 15px;
+       font-family:  sans-serif;
+        
+   }
+
+   .s1_footerSubDiv3{
+    width:250px;
+    margin-left: 20%;
+    margin-right: 20%;
+ }
+
+   .s1_footerSubDiv4{
+      margin-top: 20px;
+      display:grid;
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+
+  }
+   #s1_footerDiv4H1{
+       font-size: 16px;
+       color: rgb(134, 134, 134);
+       margin-top: -5px;
+   }
+   
+   #s1_footerP{
+    color:white;
+     font-size:15px;
+     align-self:center; 
+    
+   }
+  
+
+
+}
+@media (min-width:426px) and (max-width:786px){
+    .s1_footer{
+        display:block;
+        background-color:black;
+        align-items: center;
+        margin-top: 25px;
+        width:100%;
+        text-align: center;
+
+    }
+    
+    .s1_footerSubDiv1{
+       
+        width:70%;
+         background-color: #000000;
+        text-align: center;
+        margin-left: 15%;
+       
+    }
+
+    #s1_footerImage{
+     
+        margin-top: 60px;
+        width:65px;
+
+    }
+
+    #s1_footerH1{
+        color:white;
+        text-align: center;
+        margin-left: 5%;
+        font-size: 40px;
+        font-family:  sans-serif;
+    }
+
+    #s1_footerH3{
+        color:white;
+         font-size:15px;
+        font-family: sans-serif;
+         font-weight: 400;
+         margin-left: 5%;
+         text-align: center;
+    }
+    #s1_footerA{
+        color:#007aff;
+        text-align: center;
+        font-weight: 50;
+        font-size: 15px;
+    }
+
+    .s1_footerSubDiv2{
+        display:flex;
+        flex-direction: row;
+        margin-top: 40px;
+        margin-left: 22%;
+        column-gap: 25px;
+    }
+    #s1_footerDivesLogo{
+        width:70px;
+    }
+   #s1_footerDivesText{
+       text-align: center;
+       color:white;
+       font-size: 15px;
+       font-family:  sans-serif;
+        
+   }
+   .s1_footerSubDiv4{
+      margin-top: 20px;
+      display:flex;
+      flex-direction: row;
+      column-gap: 30px;
+     
+      margin-left:29%;
+      column-width: 10px;
+
+  }
+   #s1_footerDiv4H1{
+       font-size: 16px;
+       color: rgb(134, 134, 134);
+       margin-top: -5px;
+   }
+    
+   #s1_footerP{
+    color:white;
+     font-size:15px;
+     align-self:center; 
+     margin-left:80px
+   }
+
+
+
+    
+}
+@media (min-width:787px){
+    .s1_footer{
+        background-color:black;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+        width:100%;
+        text-align: center;
+
+    }
+
+    .s1footerSubDiv1{
+        align-items:center;
+       
+    }
+
+    #s1_footerImage{
+     
+        margin-top: 60px;
+        width:65px;
+
+    }
+    #s1_footerH1{
+        color:white;
+        text-align: center;
+        margin-left: 5%;
+        font-size: 40px;
+        font-family:  sans-serif;
+    }
+    #s1_footerH3{
+        color:white;
+         font-size:20px;
+        font-family: sans-serif;
+         font-weight: 400;
+         margin-left: 5%;
+         text-align: center;
+    }
+    #s1_footerA{
+        color:#007aff;
+        text-align: center;
+        font-weight: 50;
+        font-size: 15px;
+    }
+
+    .s1_footerSubDiv2{
+      
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 40px;
+        margin-left: 65px;
+    }
+    #s1_footerDivesLogo{
+        width:120px;
+    }
+   #s1_footerDivesText{
+       text-align: center;
+       color:white;
+       font-size: 15px;
+       font-family:  sans-serif;
+        
+   }
+   .s1_footerSubDiv4{
+      margin-top: 20px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+      column-gap: 140px;
+      margin-left: 65px;
+
+  }
+   #s1_footerDiv4H1{
+       font-size: 16px;
+       color: rgb(134, 134, 134);
+       margin-top: -5px;
+   }
+   #s1_footerP{
+     color:white;
+     font-size:15px;
+     align-self:center; 
+     margin-left:80px
+   }
+}
