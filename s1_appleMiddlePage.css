@@ -1,0 +1,60 @@
+@media (max-width:426px) {
+     
+    #s1_midImage{
+          width:90%;
+          height:600px;
+          margin-left: 2.5%;
+          border-radius: 15px; 
+      }
+
+      #s1_midText{
+        
+          margin-top: -50px;
+          font-size: 15px;
+          color:azure;
+          text-align: center;
+      }
+       
+    }
+
+    @media (min-width:426px) and (max-width:786px) {
+      
+        #s1_midImage{
+          width:95%;
+          margin-left: 2.5%;
+          margin-top: 200px;
+          border-radius: 15px; 
+      }
+
+      #s1_midText{
+          margin-left: 38%;
+          margin-top: -50px;
+          font-size: 20px;
+          color:azure;
+          
+      }
+
+    
+   }
+
+    @media (min-width:786px)   {
+        
+       
+      #s1_midImage{
+          width:95%;
+          margin-left: 2.5%;
+          margin-top: 200px;
+          border-radius: 15px; 
+      }
+
+      #s1_midText{
+          margin-left: 38%;
+          margin-top: -50px;
+          font-size: 20px;
+          color:azure;
+          
+      }
+    
+ 
+  
+}
