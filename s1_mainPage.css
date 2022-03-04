@@ -1,0 +1,132 @@
+@media (max-width:426px) {
+    .s1_maindiv{
+       
+        width:100%;
+        text-align: center;
+        height:900px;
+    }
+
+    #s1_mainPageImg{
+      width:100%;
+      height: 600px;
+    }
+
+    .s1_mainPageTextDiv{
+     margin-top: -260px;
+     text-align: center;
+ }
+ 
+ #s1_mainPageText{
+    font-size: 33px;
+    color: rgb(255, 255, 255);
+    font-family:  sans-serif;
+ }
+
+ #s1_mainPageText2{
+    font-size:15px;
+    margin-top:-9px;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+
+ #s1_mainPageButton{
+     width:200px;
+     height:35px;
+     background-color: white;
+     border-style: none;
+   
+     border-radius: 5px;
+     font-size: 15px;
+     font-weight: 700;
+ }
+ #s1_appleMainPageP{
+    color:rgb(128, 128, 128);
+     font-size:13px; 
+    text-align:center;
+  
+ }
+}
+@media (min-width:426px) and (max-width:786px){
+    .s1_maindiv{
+           display:block;
+           width:100%;
+           text-align: center;
+          
+       }
+
+       #s1_mainPageImg{
+        width:100%;
+       }
+
+       .s1_mainPageTextDiv{
+        margin-top: -260px;
+        text-align: center;
+    }
+    
+    #s1_mainPageText{
+       font-size: 50px;
+       color: rgb(255, 255, 255);
+       font-family:  sans-serif;
+    }
+
+    #s1_mainPageText2{
+       font-size:15px;
+       margin-top:-25px;
+       color: rgb(255, 255, 255);
+       font-family: sans-serif;
+    }
+
+    #s1_mainPageButton{
+        width:200px;
+        height:35px;
+        background-color: white;
+        border-style: none;
+      
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+}
+@media (min-width:786px){
+            
+    .s1_maindiv{
+        display:block;
+       width:100%;
+   }
+
+  #s1_mainPageImg{
+      width:100%;
+    }
+
+    .s1_mainPageTextDiv{
+        margin-top: -345px;
+        text-align: center;
+    }
+    
+    #s1_mainPageText{
+       font-size: 80px;
+       color: rgb(255, 255, 255);
+       font-family:  sans-serif;
+    }
+
+    #s1_mainPageText2{
+       font-size:23px;
+       margin-top:-50px;
+       color: rgb(255, 255, 255);
+       font-family: sans-serif;
+    }
+
+    #s1_mainPageButton{
+        width:200px;
+        height:35px;
+        background-color: white;
+        border-style: none;
+      
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
