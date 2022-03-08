@@ -7,25 +7,29 @@
   color: white;
 }
 
+    /* CSS For section 1 */
 .poster {
   background: url(./images/poster.webp);
   z-index: 1;
+  position: relative;
   width: 100%;
-  height: 1000px;
+  height: 120vh;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40%;
+  overflow: hidden;
 }
 .poster-content {
   width: 95%;
   margin: auto;
-  margin-top: 580px;
   display: grid;
   padding: 30px;
+  opacity: 1;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
-
 .poster > div:nth-child(1) {
   display: flex;
   flex-direction: row;
@@ -47,7 +51,7 @@
   background-color: blue;
 }
 .btn2 {
-  background-color: rgba(84, 84, 84, 0.5);
+  background-color: rgba(44, 40, 40, 0.5);
   display: flex;
   flex-direction: row;
   column-gap: 10px;
@@ -70,7 +74,7 @@
 }
 .discription-para-wrapper {
   margin-bottom: 55px;
-  margin-top: 40px;
+  margin-top: 96px;
 }
 .discription-para {
   font-size: 1rem;
@@ -88,6 +92,9 @@
 .details span:nth-last-child(1)::after {
   content: "";
 }
+.details2 {
+  visibility: hidden;
+}
 .badge1 img {
   width: 15px;
   height: 15px;
@@ -99,8 +106,87 @@
   color: rgba(255, 255, 255, 0.64);
 }
 .star-wrapper {
-  margin-top: 40px;
+  margin-top: 100px;
 }
+/* MODAL FOR MOVIE DISCRIPTION */
+#myModal {
+  display: none;
+}
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;  
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 16px;
+  margin-top: 46px;
+  border: 1px solid #888;
+  width: 73%;
+  height: 250px;
+  border-radius: 17px;
+}
+.modal-content .text {
+  width: 85%;
+  margin: auto;
+  line-height: 1.5;
+}
+.modal-content h1 {
+  color: rgb(44, 43, 43);
+}
+.drama {
+  color: #888;
+}
+.modal-para {
+  width: 85%;
+  margin: auto;
+  text-align: start;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: left;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.more {
+  color: #007aff;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.afterMOre {
+  visibility: visible;
+}
+
+
+ /* Trailer Box */
 .TOMB-trailer-cont {
   width: 95%;
   margin: auto;
@@ -133,6 +219,9 @@ h6 {
 .image-box:hover .trailer-image {
   opacity: 0.3;
 }
+
+
+    /* Slider Box */
 .slide-img {
   display: flex;
   align-items: center;
@@ -141,8 +230,8 @@ h6 {
 .slide-img:hover .trailer-image {
   opacity: 0.3;
 }
-.slide-img:hover .overlay{
-    opacity: 1;
+.slide-img:hover .overlay {
+  opacity: 1;
 }
 .image-box {
   display: flex;
@@ -165,19 +254,17 @@ h6 {
   border-radius: 40px;
   opacity: 0;
 }
-.overlay2{
-    height: 30px;
-    width: 30px;
-    border: none;
-    margin-left: 200px;
-    margin-top: 100px;
-    background-color: rgb(160, 128, 128);
-   
-
+.overlay2 {
+  height: 30px;
+  width: 30px;
+  border: none;
+  margin-left: 200px;
+  margin-top: 100px;
+  background-color: rgb(160, 128, 128);
 }
-.overlay2:hover{
-    background-color: blue;
-    align-items: center;
+.overlay2:hover {
+  background-color: blue;
+  align-items: center;
 }
 .play-btn i {
   color: white;
@@ -186,25 +273,16 @@ h6 {
   margin-top: 11px;
   font-size: 18px;
 }
-.three-dots i{
-    left:8px;
-    margin-top: -8px;
+.three-dots i {
+  left: 8px;
+  margin-top: -8px;
 }
-.TOMB-trailer-cont2 {
-  margin-top: 20px;
-}
-.TOMB-trailer-cont2:hover .next {
-  visibility: visible;
-}
-.TOMB-trailer-cont2:hover .prev {
-  visibility: visible;
-}
-
 .slider-container {
   margin-top: 10px;
   display: flex;
 }
-.carousel {
+.carousel,
+.cast-carousel {
   background: #fff;
   border-radius: 5px;
   width: 100%;
@@ -214,7 +292,8 @@ h6 {
   position: relative;
   margin-left: -20px;
 }
-.slider {
+.slider,
+.cast-slider {
   display: flex;
   height: 100%;
   width: 500%;
@@ -227,7 +306,8 @@ section {
   display: flex;
   column-gap: 20px;
 }
-.next {
+.next,
+.cast-next {
   background: none;
   border: none;
   cursor: pointer;
@@ -237,7 +317,8 @@ section {
   margin-top: 36px;
   visibility: hidden;
 }
-.prev {
+.prev,
+.cast-prev {
   background: none;
   border: none;
   cursor: pointer;
@@ -251,117 +332,295 @@ section {
 .controls button i {
   font-size: 80px;
 }
-.divider{
-    border-bottom: 1px solid gray;
-    width: 95%;
-    margin: auto;
-    margin-top: 35px;
-    margin-bottom: 30px;
+.share {
+  position: absolute;
+  margin-left: 168px;
+  /* width: 89px; */
+  padding: 9px;
+  column-gap: 10px;
+  height: 50px;
+  margin-top: 120px;
+  background: white;
+  color: black;
+  display: flex;
+  font-size: 20px;
+  visibility: hidden;
 }
-.HTW-cont{
-    width: 95%;
-    margin: auto;
+.cast_container:hover .cast-next {
+  visibility: visible;
 }
-.HTW{
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
+.cast_container:hover .cast-prev {
+  visibility: visible;
 }
-.HTW-cont > div{
-    width: 280px;
+.cast_container h6 {
+  margin-left: 30px;
+  padding: 20px;
 }
-.HTW-cont img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+.TOMB-trailer-cont2 {
+  margin-top: 20px;
 }
-.HTW-cont button{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 15px;
-    height: 60px;
-    padding-top: 10px;
-    border: none;
-    margin-top: -10px
+.TOMB-trailer-cont2:hover .next {
+  visibility: visible;
 }
-/* .avatara{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: 100;
-    row-gap: 10px;
+.TOMB-trailer-cont2:hover .prev {
+  visibility: visible;
 }
-.avatara img{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
-}
-.cast{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    line-height: 20px;
+.divider {
+  border-bottom: 1px solid gray;
+  width: 95%;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 30px;
 }
 
-.cast-name{
-    font-weight: 300;
+
+/* CSS for How To work Box */
+.HTW-cont {
+  width: 95%;
+  margin: auto;
 }
-.role{
-    color: gray;
+.HTW {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
 }
-.cast-section{
-    margin-left: 40px;
-/* } */
-/* @media only screen and (max-width: 768px){
-    .poster{
-        background-size: inherit;
-    }
-    .movie-title{
-        height: 50px;
-    width: 200px;
-    margin-left: -49px;
-    margin-top: 55px;
-    }
-    .overlay2{
-        visibility: hidden;
-    }
-    .poster-content{
-        margin-top: 200px;
-        grid-template-columns: repeat(3,1fr);
-    }
-    .discription-wrapper{
-        grid-column: 2;
-    }
-    .discription-para-wrapper{
-        margin-top: 40px;
-        margin-bottom: 10px;
-    }
-    .details-wrapper{
-        width: 198%;
-    }
-    .first-flex{
-        text-align: center;
-    }
-} */
-/* @media only screen and (max-width: 425px) {
+.HTW-cont > div {
+  width: 280px;
+}
+.HTW-cont img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.HTW-cont button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 15px;
+  height: 60px;
+  padding-top: 10px;
+  border: none;
+  margin-top: -10px;
+}
+.HTW-cont p {
+  padding: 5px;
+  margin: auto;
+}
+
+
+/* CSS For Cast And Crew */
+.avatara {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  row-gap: 10px;
+}
+.avatara img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 7px rgb(0 0 0 / 25%);
+}
+.cast {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 20px;
+}
+.cast-name {
+  font-weight: 300;
+}
+.role {
+  color: gray;
+}
+.cast-section {
+  margin-left: 0px;
+}
+
+/* For Medium Devices Like Tablets */
+@media only screen and (max-width: 768px) {
   .poster {
-    width: 100%;
-    height: 800px;
+    background-size: auto;
+    row-gap: 0%;
+    margin-bottom: -200px;
   }
   .movie-title {
-    min-width: 277px;
-    margin-top: 300px;
-    margin-left: 63px;
-  } */
-  
-/* } */ 
+    height: 51px;
+    margin-left: -50px;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  #myModal {
+    display: none;
+  }
+  .modal {
+    visibility: visible;
+    display: none;
+  }
+  .more {
+    visibility: visible;
+    margin-top: 0px;
+    top: 406px;
+    z-index: 0;
+    font-weight: 800;
+    left: 469px;
+    color: blue;
+  }
+  .afterMOre {
+    visibility: hidden;
+  }
+  .overlay2 {
+    visibility: hidden;
+  }
+  .poster-content {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+  .discription-wrapper {
+    grid-column: 2;
+  }
+  .discription-para {
+    margin-top: 70px;
+  }
+  .discription-para-wrapper {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .star-wrapper {
+    margin-top: 70px;
+  }
+  .trailer {
+    margin-top: 80px;
+  }
+  .details-wrapper {
+    width: 198%;
+  }
+  .first-flex {
+    text-align: center;
+  }
+  .slide-img {
+    width: 200px;
+  }
+  .HTW-cont div {
+    width: 245px;
+  }
+  .HTW-cont {
+    width: 90%;
+  }
+}
+
+/* For small Devices like Mobile Phones */
+@media only screen and (max-width: 426px) {
+  .poster {
+    object-fit: cover;
+    overflow: hidden;
+    background: url("./images/mainPoster.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 97vh;
+    width: 100%;
+  }
+  .poster-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .first-flex {
+    width: 201%;
+    margin-left: 45px;
+    margin-top: 20px;
+  }
+  .movie-title {
+    margin-left: 0px;
+    height: 85px;
+    margin-left: 20px;
+  }
+  .poster > div:nth-child(1) {
+    margin-top: 120px;
+  }
+  .first-flex button {
+    padding-bottom: 31px;
+    height: 30px;
+  }
+  .discription-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .discription-para-wrapper {
+    margin-bottom: 0px;
+    margin-top: -67px;
+    line-height: 2;
+  }
+  .discription-para {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .details-wrapper {
+    margin-top: 17px;
+  }
+  .trailer {
+    margin-top: 213px;
+  }
+  .TOMB-trailers > div {
+    width: 195px;
+  }
+
+  .more {
+    visibility: visible;
+    left: 312px;
+    top: 515px;
+  }
+  /* Modal Content */
+  .modal-content {
+    width: 85%;
+  }
+  .modal-content h1 {
+    font-size: 25px;
+  }
+  .drama {
+    margin-left: 8px;
+  }
+  .modal-para {
+    width: 91%;
+    margin-left: 34px;
+    margin-top: 13px;
+  }
+  .details {
+    visibility: hidden;
+  }
+  .badge1 {
+    margin-left: -209px;
+    margin-top: -35px;
+  }
+  .details2 {
+    color: white;
+    margin-bottom: 0px;
+    visibility: visible;
+  }
+  /* The Close Button */
+  .close {
+    font-size: 40px;
+  }
+  .trail-msg {
+    visibility: hidden;
+  }
+
+  .slide-img {
+    width: 195px;
+  }
+  .HTW-cont div {
+    width: 220px;
+  }
+  .star {
+    visibility: hidden;
+  }
+}

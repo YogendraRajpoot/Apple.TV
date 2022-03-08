@@ -7,6 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
       rel="stylesheet"
     />
@@ -27,7 +31,11 @@
     <link rel="stylesheet" href="TOMB.css" />
   </head>
   <body>
+
     <div id="main-container">
+
+      <!-- Section 1   Start-->
+
       <div class="poster">
         <div>
           <img
@@ -35,12 +43,17 @@
             class="movie-title"
           />
         </div>
+
         <div class="poster-content">
           <div class="first-flex">
             <div>
-              <span class="white"
-                >&nbsp;&nbsp;&nbsp;&nbsp; 7 days free, then $4.99/month.</span
-              >
+              <div class="details details2">
+                <span>Drama</span>
+                <span>2021</span>
+                <span>1 hr 45 min</span>
+                <span class="span3">Apple TV+</span>
+              </div>
+              <span class="white trail-msg">7 days free, then $4.99/month.</span>
             </div>
             <div>
               <button class="btn1 white">Start Free Trial</button>
@@ -55,16 +68,38 @@
               </button>
             </div>
           </div>
-
           <div class="discription-wrapper">
             <div class="discription-para-wrapper">
               <div class="discription-para white">
                 Denzel Washington and Frances McDormand star in Joel Coen's bold
-                and fierce adaptation - a tale of murder,<br />
-                madness, ambition, and wrathful cunning.
+                and fierce adaptation - a tale
+                <span class="afterMOre"
+                  >murder,madness, ambition, and wrathful cunning.</span
+                >
               </div>
+
+              <button class="more" onclick="viewModal()">MORE</button>
             </div>
 
+            <!-- Modal content Start -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="hideModal()">&times;</span>
+                <br /><br /><br />
+                <div class="text">
+                  <h1>The Tragedy of Macbeth</h1>
+                  <p class="drama">Drama - 2021</p>
+                </div>
+                <div class="modal-para">
+                  <p>
+                    Denzel Washington and Frances McDormand star in Joel Coen's
+                    bold and fierce adaptation - a tale of murder,madness,
+                    ambition, and wrathful cunning.
+                  </p>
+                </div>
+              </div>
+              <!-- Modal content end -->
+            </div>
             <div class="white details-wrapper">
               <div class="details">
                 <span>Drama</span>
@@ -134,8 +169,12 @@
         </div>
       </div>
 
-      <!-- box to store trailer -->
-      <div class="TOMB-trailer-cont">
+        <!-- Section 1 End -->
+
+
+      <!-- box to store trailer start-->
+
+      <div class="TOMB-trailer-cont trailer" >
         <h6>&nbsp;&nbsp;<b>Trailers</b></h6>
         <div class="TOMB-trailers">
           <div>
@@ -172,7 +211,10 @@
         </div>
       </div>
 
-      <!-- box to store bonus content -->
+      <!-- box to store trailer end -->
+
+      <!-- box to store bonus content start-->
+
       <div class="TOMB-trailer-cont">
         <h6>&nbsp;&nbsp;<b>Bonus Content</b></h6>
         <div class="TOMB-trailers">
@@ -194,7 +236,12 @@
         </div>
       </div>
 
-      <!-- Slider Box For Movies -->
+      <!-- box to store bonus content End-->
+
+
+
+      <!-- Slider Box For Movies Start -->
+
       <div class="TOMB-trailer-cont2">
         <h6>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
@@ -224,11 +271,15 @@
                   </a>
 
                   <!-- Overlayer -->
-                  <button class="overlay overlay2">
+                  <button class="overlay overlay2" onclick="viewShareBtn()">
                     <div class="play-btn three-dots">
                       <i style="font-size: 18px" class="fa">&#xf141;</i>
                     </div>
                   </button>
+
+                  <div class="share">
+                    share<i class="material-icons">share</i>
+                  </div>
                 </div>
 
                 <div class="slide-img">
@@ -238,11 +289,15 @@
                     <img src="./images/Foundation.webp" class="trailer-image" />
                   </a>
                   <!-- Overlayer -->
-                  <button class="overlay overlay2">
+                  <button class="overlay overlay2" onclick="viewShareBtn()">
                     <div class="play-btn three-dots">
                       <i style="font-size: 18px" class="fa">&#xf141;</i>
                     </div>
                   </button>
+
+                  <div class="share">
+                    share<i class="material-icons">share</i>
+                  </div>
                 </div>
 
                 <div class="slide-img">
@@ -613,9 +668,13 @@
         </div>
       </div>
 
+      <!-- Slider Box For Movies End -->
+
       <div class="divider"></div>
 
-      <div class="HTW-cont">
+      <!-- How To Work Section Start -->
+
+      <div class="HTW-cont" onclick="hideContent()">
         <h6>How To Watch</h6>
         <div class="HTW">
           <div>
@@ -629,29 +688,32 @@
           </div>
         </div>
 
-        <p>&nbsp; &nbsp; &nbsp; 7 days free, then $4.99/month.</p>
+        <p>7 days free, then $4.99/month.</p>
       </div>
+
+      <!-- How To Work Section End -->
+
       <div class="divider"></div>
 
-      <!-- Slider Box For CAST & CREW -->
+      <!-- Slider Box For CAST & CREW Start-->
 
-      <div class="TOMB-trailer-cont2">
+      <div class="cast_container">
         <h6>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
+          <b
             >Cast & Crew</b
           >
         </h6>
         <div class="slider-container">
           <!-- Previous Arrow -->
           <div class="controls">
-            <button class="prev">
+            <button class="cast-prev">
               <i class="material-icons"> keyboard_arrow_left </i>
             </button>
           </div>
 
-          <!-- <div class="carousel">
-            <div class="slider"> -->
-              <!-- <section class="cast-section">
+        <div class="cast-carousel">
+            <div class="cast-slider">
+           <section class="cast-section">
                 <div class="avatara">
                   <div>
                     <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
@@ -773,20 +835,146 @@
                     <p class="role">Lady Macduff</p>
                   </div>
                 </div>
-              </section> -->
-            <!-- </div>
-          </div> -->
+              </section> 
+
+              <section class="cast-section">
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/CoreyHawkings.webp"class="cast-img" />
+                    </a>
+                    
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Denzel<br/> Washington</p>
+                    <p class="role">Macbeth</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/Hunter.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Frances<br/> McDormand</p>
+                    <p class="role">Lady Macbeth</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/BrendonGlesson.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Corey Hawkins</p>
+                    <p class="role">Macduff</p>
+                  </div>
+                </div>
+
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/BeltyCarvel.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Bertie Carvel</p>
+                    <p class="role">Banquo</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/HarryMelling.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Alex Hassell</p>
+                    <p class="role">Ross</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/Moses.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Kathryn Hunter</p>
+                    <p class="role">Witches / Old <br/>Man</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/alexHassel.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Harry Melling</p>
+                    <p class="role">Malcolm</p>
+                  </div>
+                </div>
+                
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/BeltyCarvel.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Brendan Gleeson</p>
+                    <p class="role">Duncan</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/BrendonGlesson.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Miles Enderson</p>
+                    <p class="role">Lennox</p>
+                  </div>
+                </div>
+
+                <div class="avatara">
+                  <div>
+                    <a href="https://tv.apple.com/us/person/denzel-washington/umc.cpc.1toie5iozf7nkcoe05bfgbqx0">
+                      <img src="./images/Denzel.webp"class="cast-img" />
+                    </a>
+                  </div>
+                  <div class="cast">
+                    <p class="cast-name">Moses Ingram</p>
+                    <p class="role">Lady Macduff</p>
+                  </div>
+                </div>
+              </section>
+       </div>
+          </div> 
 
           <!-- Next Arrow -->
-          <!-- <div class="controls"> -->
-            <!-- <button class="next">
+          <div class="controls"> 
+           <button class="cast-next">
               <i class="material-icons"> keyboard_arrow_right </i>
-            </button> -->
-          <!-- </div> -->
+            </button> 
+          </div> 
         </div>
       </div>
 
-      <!-- <div class="divider"></div> -->
+      <!-- Slider Box For CAST & CREW End-->
+
+      <div class="divider"></div> 
     </div>
 
     <script type="text/javascript" src="TOMB.js"></script>
